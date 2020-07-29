@@ -1,15 +1,14 @@
-import 'package:auth_login/boy_components/item_cart.dart';
-import 'package:auth_login/screens/boy_detail_screen.dart';
+import 'package:auth_login/discount_components/item_cart.dart';
+import 'package:auth_login/model/DiscountProduct.dart';
+import 'package:auth_login/screens/discount_detail_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../model/BoyProduct.dart';
-
-class BoyScreen extends StatelessWidget {
+class DiscountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Boy Clothes"),
+        title: Text("Discount Clothes"),
         elevation: 0.0,
       ),
       body: Column(

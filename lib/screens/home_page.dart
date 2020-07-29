@@ -1,5 +1,8 @@
 import 'package:auth_login/screens/boy_screen.dart';
+import 'package:auth_login/screens/child_screen.dart';
 import 'package:auth_login/screens/custom_app_bar.dart';
+import 'package:auth_login/screens/discount_screen.dart';
+import 'package:auth_login/screens/girl_screen.dart';
 import 'package:auth_login/utils/strings.dart';
 import 'package:auth_login/utils/subscription_container.dart';
 import 'package:flutter/material.dart';
@@ -76,17 +79,35 @@ class _HomePageState extends State<HomePage> {
                         imgPath: 'assets/images/boy.jpg',
                       ),
                     ),
-                    SubscriptionContainer(
-                      text: Strings.womenSubscription,
-                      imgPath: 'assets/images/women.jpg',
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => GirlScreen()));
+                      },
+                      child: SubscriptionContainer(
+                        text: Strings.womenSubscription,
+                        imgPath: 'assets/images/women.jpg',
+                      ),
                     ),
-                    SubscriptionContainer(
-                      text: Strings.childSubscription,
-                      imgPath: 'assets/images/child.jpg',
+                    GestureDetector(
+                      onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => ChildScreen()));
+                      },
+                      child: SubscriptionContainer(
+                        text: Strings.childSubscription,
+                        imgPath: 'assets/images/child.jpg',
+                      ),
                     ),
-                    SubscriptionContainer(
-                      text: Strings.discountSubscription,
-                      imgPath: 'assets/images/discount.jpg',
+                    GestureDetector(
+                      onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => DiscountScreen()));
+                      },
+                      child: SubscriptionContainer(
+                        text: Strings.discountSubscription,
+                        imgPath: 'assets/images/discount.jpg',
+                      ),
                     ),
                     /*  Padding(
                       padding: EdgeInsets.only(top: 80),
