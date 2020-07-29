@@ -2,7 +2,6 @@ import 'package:auth_login/constants.dart';
 import 'package:auth_login/model/GirlProduct.dart';
 import 'package:flutter/material.dart';
 
-
 class ProductTitleWithImage extends StatelessWidget {
   const ProductTitleWithImage({
     Key key,
@@ -19,7 +18,7 @@ class ProductTitleWithImage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Aristous Hang Bag',
+            'Women Clothes',
             style: TextStyle(color: Colors.white),
           ),
           Text(

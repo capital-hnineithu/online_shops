@@ -19,7 +19,7 @@ class ProductTitleWithImage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Aristous Hang Bag',
+            'Men Clothes',
             style: TextStyle(color: Colors.white),
           ),
           Text(

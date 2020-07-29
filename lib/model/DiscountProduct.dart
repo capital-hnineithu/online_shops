@@ -18,7 +18,7 @@ class Product {
 List<Product> products = [
   Product(
       id: 1,
-      title: "Office Code",
+      title: "T-Shirt",
       price: 234,
       size: 12,
       description: dummyText,
@@ -26,7 +26,7 @@ List<Product> products = [
       color: Colors.black26),
   Product(
       id: 2,
-      title: "Belt Bag",
+      title: "Shirt",
       price: 200,
       size: 8,
       description: dummyText,
@@ -34,7 +34,7 @@ List<Product> products = [
       color: Colors.brown.shade300),
   Product(
       id: 3,
-      title: "Hang Top",
+      title: "Baby Onesie",
       price: 250,
       size: 10,
       description: dummyText,
@@ -42,7 +42,7 @@ List<Product> products = [
       color: Colors.cyan.shade200),
   Product(
       id: 4,
-      title: "Old Fashion",
+      title: "Baby Dress",
       price: 149,
       size: 11,
       description: dummyText,
@@ -50,7 +50,7 @@ List<Product> products = [
       color: Colors.purple.shade200),
   Product(
       id: 5,
-      title: "Office Code",
+      title: "Jean Skirt",
       price: 257,
       size: 12,
       description: dummyText,
@@ -58,7 +58,7 @@ List<Product> products = [
       color: Colors.blue.shade300),
   Product(
     id: 6,
-    title: "Office Code",
+    title: "Mini Skirt",
     price: 390,
     size: 12,
     description: dummyText,
