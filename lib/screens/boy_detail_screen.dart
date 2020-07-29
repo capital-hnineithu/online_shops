@@ -88,7 +88,10 @@ class Body extends StatelessWidget {
                           topRight: Radius.circular(24))),
                   child: Column(
                     children: [
-                      ColorAndSize(product: product),
+                      Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: ColorAndSize(product: product),
+                      ),
                       SizedBox(
                         height: defaultPadding / 2,
                       ),
