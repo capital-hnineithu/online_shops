@@ -1,4 +1,5 @@
 import 'package:auth_login/constants.dart';
+import 'package:auth_login/voucher/boy_voucher.dart';
 import 'package:flutter/material.dart';
 
 import '../model/BoyProduct.dart';
@@ -38,7 +39,10 @@ class AddToCart extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  onPressed: () {},
+                  onPressed: () { Navigator.of(context).push(
+                    MaterialPageRoute (builder: (context) => Voucher() )
+                    );
+                  },
                   color: product.color,
                   child: Text(
                     'Buy Now'.toUpperCase(),

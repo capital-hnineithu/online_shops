@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Product {
   final String image, title, description;
-  final int price, size, id;
+  final int price, id;
+  final String size;
   final Color color;
   Product({
     this.id,
@@ -20,7 +21,7 @@ List<Product> products = [
       id: 1,
       title: "Suite",
       price: 234,
-      size: 12,
+      size: "S, M, L",
       description: dummyText,
       image: "assets/boyimages/boy1.png",
       color: Colors.blueGrey),
@@ -28,7 +29,7 @@ List<Product> products = [
       id: 2,
       title: "Jacket",
       price: 200,
-      size: 8,
+      size: "S, M, L",
       description: dummyText,
       image: "assets/boyimages/boy2.png",
       color: Colors.cyan.shade600),
@@ -36,7 +37,7 @@ List<Product> products = [
       id: 3,
       title: "Sport Shirt",
       price: 250,
-      size: 10,
+      size: "S, M, L",
       description: dummyText,
       image: "assets/boyimages/boy3.png",
       color: Colors.teal.shade200),
@@ -44,7 +45,7 @@ List<Product> products = [
       id: 4,
       title: "Windbreaker Jacket",
       price: 149,
-      size: 11,
+      size: "S, M, L",
       description: dummyText,
       image: "assets/boyimages/boy4.png",
       color: Colors.yellow.shade300),
@@ -52,7 +53,7 @@ List<Product> products = [
       id: 5,
       title: "Jersey Jacket",
       price: 257,
-      size: 12,
+      size:"S, M, L",
       description: dummyText,
       image: "assets/boyimages/boy5.png",
       color: Colors.orangeAccent),
@@ -60,7 +61,7 @@ List<Product> products = [
     id: 6,
     title: "Shirt",
     price: 390,
-    size: 12,
+    size: "S, M, L",
     description: dummyText,
     image: "assets/boyimages/boy6.png",
     color: Colors.pink.shade300,

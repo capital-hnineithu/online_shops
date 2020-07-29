@@ -16,14 +16,14 @@ class DetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: product.color,
-      appBar: buildAppBar(),
+      appBar: buildAppBar(context),
       body: Body(
         product: product,
       ),
     );
   }
 
-  AppBar buildAppBar() {
+  AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: product.color,
       elevation: 0,
@@ -33,29 +33,8 @@ class DetailScreen extends StatelessWidget {
           width: 25,
           height: 25,
         ),
-        onPressed: () {},
+        onPressed: () { Navigator.of(context).pop();},
       ),
-      actions: [
-        IconButton(
-          icon: Image.asset(
-            'assets/images/search.png',
-            width: 20,
-            height: 20,
-          ),
-          onPressed: () {},
-        ),
-        IconButton(
-          icon: Image.asset(
-            'assets/images/add_to_cart.png',
-            width: 20,
-            height: 20,
-          ),
-          onPressed: () {},
-        ),
-        SizedBox(
-          width: defaultPadding / 2,
-        )
-      ],
     );
   }
 }
