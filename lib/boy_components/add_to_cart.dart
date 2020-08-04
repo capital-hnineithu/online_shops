@@ -40,7 +40,7 @@ class AddToCart extends StatelessWidget {
                     borderRadius: BorderRadius.circular(16),
                   ),
                   onPressed: () { Navigator.of(context).push(
-                    MaterialPageRoute (builder: (context) => Voucher() )
+                    MaterialPageRoute (builder: (context) => Voucher( product: this.product,) )
                     );
                   },
                   color: product.color,

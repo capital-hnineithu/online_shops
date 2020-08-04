@@ -20,7 +20,7 @@ class ColorAndSize extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('Color'),
-              Row(children: [
+              Row(children: [            
                 ColorDot(
                   color: Colors.brown,
                   isSelected: true,
@@ -35,19 +35,58 @@ class ColorAndSize extends StatelessWidget {
             ],
           ),
         ),
-        Expanded(
-          child: RichText(
-              text: TextSpan(style: TextStyle(color: textColor), children: [
-            TextSpan(text: 'Size\n'),
-            TextSpan(
-                text: '${product.size}',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline5
-                    .copyWith(fontWeight: FontWeight.bold)),
-          ])),
-        ),
+        Expanded(child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Size'),
+           buildDropDown(),
+            ],
+        )),
       ],
+    );
+  }
+}
+
+class buildDropDown extends StatefulWidget {
+  @override
+  _buildDropDownState createState() => _buildDropDownState();
+}
+
+class _buildDropDownState extends State<buildDropDown> {
+  final List<String> items = <String>['Small', 'M', 'L'];
+  String selectedItem = 'Small';
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+       margin:
+          EdgeInsets.only(top: defaultPadding / 4, right: defaultPadding / 2),
+      padding: EdgeInsets.all(3.5),
+      height: 30.0,
+      width: 80.0,
+       decoration: BoxDecoration(
+              border: Border.all(width: 1.0),
+              borderRadius: BorderRadius.all(
+        Radius.circular(5.0) //         <--- border radius here
+    ),
+    ),
+      child: 
+          DropdownButton<String>(
+            value: selectedItem,
+             underline: SizedBox(),
+            onChanged: (String string) => setState(() => selectedItem = string),
+            selectedItemBuilder: (BuildContext context) {
+              return items.map<Widget>((String item) {
+                return Text(item);
+              }).toList();
+            },
+            items: items.map((String item) {
+              return DropdownMenuItem<String>(
+                child: Text(item, style:  TextStyle(color: Colors.black),),
+                value: item,
+              );
+            }).toList(),
+            
+          ),
     );
   }
 }
