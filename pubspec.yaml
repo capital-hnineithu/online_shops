@@ -31,10 +31,17 @@ dependencies:
   firebase_auth: ^0.16.1
   google_sign_in: ^4.5.1
   flutter_auth_buttons: ^0.8.0
+  flutter_launcher_icons: ^0.7.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+
+flutter_icons:
+  ios: true
+  android: true
+  image_path: "assets/luncher/icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
